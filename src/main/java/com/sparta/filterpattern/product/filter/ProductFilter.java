@@ -1,6 +1,6 @@
-package com.sparta.filterpattern.filter;
+package com.sparta.filterpattern.product.filter;
 
-import com.sparta.filterpattern.model.Product;
+import com.sparta.filterpattern.product.model.Product;
 import lombok.NonNull;
 
 /**

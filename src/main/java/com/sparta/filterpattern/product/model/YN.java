@@ -1,4 +1,4 @@
-package com.sparta.filterpattern.model;
+package com.sparta.filterpattern.product.model;
 
 /**
  * create on 2024/05/16 create by IntelliJ IDEA.
@@ -9,11 +9,6 @@ package com.sparta.filterpattern.model;
  * @version 1.0
  * @since 1.0
  */
-public enum Category {
-
-  PANTS,
-  SHIRTS,
-  SOCKS,
-  ACCESSORY
-  ;
+public enum YN {
+  Y, N;
 }

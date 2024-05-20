@@ -1,7 +1,7 @@
-package com.sparta.filterpattern.filter;
+package com.sparta.filterpattern.product.filter;
 
-import com.sparta.filterpattern.model.Product;
-import com.sparta.filterpattern.model.YN;
+import com.sparta.filterpattern.product.model.Product;
+import com.sparta.filterpattern.product.model.YN;
 
 /**
  * create on 2024/05/16 create by IntelliJ IDEA.
