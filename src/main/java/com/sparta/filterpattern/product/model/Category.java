@@ -26,5 +26,6 @@ public enum Category {
         return category;
       }
     }
+    throw new IllegalArgumentException("Category not found");
   }
 }
