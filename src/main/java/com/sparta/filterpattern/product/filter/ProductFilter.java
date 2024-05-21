@@ -52,7 +52,7 @@ public abstract class ProductFilter {
    * @return 체크 유무
    */
   protected boolean checkNext(@NonNull Product product) {
-    if (this.next != null) {
+    if (this.next == null) {
       return true;
     }
     return this.next.check(product);

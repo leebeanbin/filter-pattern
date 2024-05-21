@@ -30,7 +30,7 @@ public class InitDataConstructor {
   public void init() {
     List<Product> productList =
         List.of(new Product("어센틱 44 DX - (애너하임 팩토리) 블루",
-                45990D, Category.SHOES, YN.N),
+                45990D, Category.SHOES, YN.Y),
             new Product("[이서 착용] 2color 여 슬림핏 인스티튜셔널 로고 반팔 티셔츠 (화이트블랙)",
                 52000D, Category.PANTS, YN.N),
             new Product("[무료반품] Honey Teddy 피그먼트 반팔티 스모크블랙",

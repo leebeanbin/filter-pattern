@@ -1,5 +1,9 @@
 package com.sparta.filterpattern.product.controller;
 
+import com.sparta.filterpattern.product.model.Product;
+import com.sparta.filterpattern.product.service.ProductService;
+import java.util.List;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,10 +20,20 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/product")
+@RequiredArgsConstructor
 public class ProductController {
 
+  private final ProductService service;
+
+  /**
+   * findAll.
+   *
+   * @return products.
+   */
   @GetMapping
-  public ResponseEntity<String> getProduct() {
-    return ResponseEntity.ok("success");
+  public ResponseEntity<List<Product>> findAll() {
+    return ResponseEntity.ok(
+        service.findAll()
+    );
   }
 }

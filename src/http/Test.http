@@ -1,2 +1,11 @@
 ## GET
 GET http://localhost:8080/product
+
+### Get with Cookie
+GET http://localhost:8080/product
+Cookie: product=1;
+
+
+### Get with Cart Cookie
+GET http://localhost:8080/product
+Cookie: product=1; cart=true

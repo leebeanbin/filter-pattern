@@ -29,7 +29,12 @@ public class ProductService {
     return repository.save(product);
   }
 
-  public List<Product> findAll(Product product) {
+  /**
+   * 전체 찾기.
+   *
+   * @return 조회된 상품
+   */
+  public List<Product> findAll() {
     return repository.findAll()
         .stream()
         .filter(p -> filter.check(p))
@@ -41,5 +46,4 @@ public class ProductService {
     ProductFilter productFilter = new ProductSoldYnFilter();
     return productFilter;
   }
-
 }
