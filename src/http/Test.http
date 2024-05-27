@@ -8,4 +8,9 @@ Cookie: product=1;
 
 ### Get with Cart Cookie
 GET http://localhost:8080/product
-Cookie: product=1; cart=true
+Cookie: product=1; view=true
+
+
+### Get with Cart Cookie
+GET http://localhost:8080/product
+Cookie: product=1; cart=ture; view=true;

@@ -2,6 +2,7 @@ package com.sparta.filterpattern.common.config;
 
 import com.sparta.filterpattern.common.filter.LoggingFilter;
 import com.sparta.filterpattern.common.filter.CartCookieFilter;
+import com.sparta.filterpattern.common.filter.ViewFilter;
 import jakarta.servlet.Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -45,6 +46,16 @@ public class FilterConfiguration {
   public FilterRegistrationBean cartCookieFilter() {
     FilterRegistrationBean<Filter> filterRegistrationBean = new FilterRegistrationBean<>();
     filterRegistrationBean.setFilter(new CartCookieFilter());
+    filterRegistrationBean.setOrder(2);
+    filterRegistrationBean.addUrlPatterns("/product", "/product/**");
+
+    return filterRegistrationBean;
+  }
+
+  @Bean
+  public FilterRegistrationBean viewCookieFilter() {
+    FilterRegistrationBean<Filter> filterRegistrationBean = new FilterRegistrationBean<>();
+    filterRegistrationBean.setFilter(new ViewFilter());
     filterRegistrationBean.setOrder(2);
     filterRegistrationBean.addUrlPatterns("/product", "/product/**");
 

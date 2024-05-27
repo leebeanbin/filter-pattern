@@ -1,5 +1,6 @@
 package com.sparta.filterpattern.product.service;
 
+import com.sparta.filterpattern.product.filter.ProductCategoryFilter;
 import com.sparta.filterpattern.product.filter.ProductFilter;
 import com.sparta.filterpattern.product.filter.ProductSoldYnFilter;
 import com.sparta.filterpattern.product.model.Product;
@@ -43,7 +44,10 @@ public class ProductService {
   }
 
   private ProductFilter initFilter() {
+    // 품절 여부 필터 등록
     ProductFilter productFilter = new ProductSoldYnFilter();
-    return productFilter;
+
+    // 카테고리 필터
+    return productFilter.add(new ProductCategoryFilter());
   }
 }
