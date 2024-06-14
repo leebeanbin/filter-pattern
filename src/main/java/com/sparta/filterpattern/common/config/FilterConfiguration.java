@@ -2,6 +2,7 @@ package com.sparta.filterpattern.common.config;
 
 import com.sparta.filterpattern.common.filter.LoggingFilter;
 import com.sparta.filterpattern.common.filter.CartCookieFilter;
+import com.sparta.filterpattern.common.filter.ViewCookieFilter;
 import com.sparta.filterpattern.common.filter.ViewFilter;
 import jakarta.servlet.Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

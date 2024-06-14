@@ -38,7 +38,7 @@ public class ProductService {
   public List<Product> findAll() {
     return repository.findAll()
         .stream()
-        .filter(p -> filter.check(p))
+        .filter(p -> filter.check(p)) // 해당 필터를 통해서 true 만을 리턴 해줍니다.
         .toList();
 
   }
